@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Card</title>
+  <style>
+    body {
+      background: #fff;
+      color: #222;
+      transition: background 0.3s, color 0.3s;
+    }
+    body.dark {
+      background: #181a1b;
+      color: #f1f1f1;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      justify-content: center;
+      gap: 25px;
+      padding: 10px;
+    }
+    .theme-toggle {
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      z-index: 10;
+      background: #fff;
+      color: #003C71;
+      border: 1px solid #ddd;
+      border-radius: 20px;
+      padding: 0.3em 1em;
+      cursor: pointer;
+      transition: background 0.3s, color 0.3s;
+    }
+    body.dark .theme-toggle {
+      background: #181a1b;
+      color: #4fc3f7;
+      border-color: #444;
+    }
+  </style>
+</head>
+<body>
+  <button class="theme-toggle" aria-label="Cambiar tema" onclick="
+    document.body.classList.toggle('dark');
+    document.querySelectorAll('product-card').forEach(card => {
+      card.setAttribute('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+    });
+  ">
+    Cambiar tema
+  </button>
+  <div class="container">
+    <product-card
+      theme="dark" size="small"
+      image="https://labomersa.com/wp-content/uploads/2024/07/Agitador-Rotador-De-Tubos-Horizontal-Modelo-Mx-Rl-Pro.jpg"
+      title="Agitador (Rotador) de Tubos Horizontal Modelo MX-RL-PRO"
+      categories="Académico e investigación Ambiental, Biotecnología"
+      tags="Velocidad y tiempo de la pantalla LCD., Rango de velocidad de 10 a 70 rpm., Brinda un balanceo suave pero efectivo."
+      extras="Incluye instalación y puesta en marcha a cargo de nuestro personal técnico."
+      rating="4.5"
+      price="$25.00"
+      specifications="Tipo de motor: Motor CC sin escobillas., Visualización de velocidad: LCD., Pantalla de temporizador: LCD., Temporizador: 1 - 1199 min."
+    ></product-card>
+    <product-card
+      theme="dark" size="small"
+      image="https://labomersa.com/wp-content/uploads/2024/07/Agitador-Rotador-De-Tubos-Horizontal-Modelo-Mx-Rl-Pro.jpg"
+      title="Agitador (Rotador) de Tubos Horizontal Modelo MX-RL-PRO"
+      categories="Académico e investigación Ambiental, Biotecnología"
+      tags="Velocidad y tiempo de la pantalla LCD., Rango de velocidad de 10 a 70 rpm., Brinda un balanceo suave pero efectivo."
+      extras="Incluye instalación y puesta en marcha a cargo de nuestro personal técnico."
+      rating="4.5"
+      price="$25.00"
+      specifications="Tipo de motor: Motor CC sin escobillas., Visualización de velocidad: LCD., Pantalla de temporizador: LCD., Temporizador: 1 - 1199 min."
+    ></product-card>
+  <script>
+    // Al cargar, sincroniza el tema de los componentes con el body
+    if(document.body.classList.contains('dark')) {
+      document.querySelectorAll('product-card').forEach(card => card.setAttribute('theme', 'dark'));
+    } else {
+      document.querySelectorAll('product-card').forEach(card => card.setAttribute('theme', 'light'));
+    }
+  </script>
+</body>
+</html>

@@ -36,16 +36,33 @@ Para que te funcione asegurate de haber registrado el componente con JS importan
 | `size`           | `string` | Tamaño visual: `small`, `default` (sin atributo) |
 
 ## Tester y Compatibilidad
-Probado correctamente en los siguientes navegadores:
+
+Uso del componente en el navegador
+
+![Uso del componente](./docs/Uso%20del%20componente.gif)
+
+Probado correctamente en los siguientes navegadores tanto en modo claro como oscuro:
 
 - Google Chrome
 
+![Chrome Claro](./docs/navegadores-claro/chrome.png)
+
+![Chrome Oscuro](./docs/navegadores-oscuro/chrome.png)
 - Firefox
 
+![Firefox Claro](./docs/navegadores-claro/firefox.png)
+
+![Firefox Oscuro](./docs/navegadores-oscuro/firefox.png)
 - Edge
 
+![Edge Claro](./docs/navegadores-claro/edge.png)
+
+![Edge Oscuro](./docs/navegadores-oscuro/edge.png)
 - Brave
 
+![Brave Claro](./docs/navegadores-claro/brave.png)
+
+![Brave Oscuro](./docs/navegadores-oscuro/brave.png)
 
 
 # Reporte Tecnico (Markdown)
